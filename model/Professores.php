@@ -1,6 +1,6 @@
 <?php
 
-class professor {
+class professores {
    private $id;
    private $numero_contribuinte;
    private $nome;

@@ -1,8 +1,9 @@
 <?php
 
 
-class UsuarioControl {
-     public function inserir(){
+class PlanoDeCursosControl {
+    
+    public function inserir(){
         
     }
     public function listarTodos(){

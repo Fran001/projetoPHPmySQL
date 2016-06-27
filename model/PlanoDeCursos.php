@@ -1,10 +1,14 @@
 <?php
 
-
-class especilidade {
-    private $id;
+/*
+ 
+ * Description of planoDeCurso
+ *
+ * @author Ciclonne
+ */
+class PlanoDeCursos {
+    private$id;
     private $nome;
-    
     function getId() {
         return $this->id;
     }

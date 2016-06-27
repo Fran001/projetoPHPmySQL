@@ -1,8 +1,11 @@
 <?php
 
-
-class UsuarioControl {
-     public function inserir(){
+/*
+ 
+ */
+class DepartamentosControl {
+    
+    public function inserir(){
         
     }
     public function listarTodos(){

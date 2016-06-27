@@ -1,8 +1,9 @@
 <?php
 
 
-class UsuarioControl {
-     public function inserir(){
+class EscritoriosControl {
+    
+   public function inserir(){
         
     }
     public function listarTodos(){

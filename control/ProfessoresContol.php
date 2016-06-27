@@ -1,8 +1,7 @@
 <?php
 
-
-class UsuarioControl {
-     public function inserir(){
+class ProfessoresContol {
+    public function inserir(){
         
     }
     public function listarTodos(){
