@@ -1,5 +1,5 @@
 <?php
-
+include_once '../db/Conexao.php';
 class Usuario {
     private $id;
     private $nome;
@@ -37,6 +37,13 @@ class Usuario {
     function setSenha($senha) {
         $this->senha = $senha;
     }
-
+//Realizando consulta no banco.
+    public function listarTodosUsuarios(){
+        $sql = 'SELECT * FROM usuarios';
+        $query = conexao :: prepare($sql);
+        $query->execute();
+        return $query->fetchAll();
+        
+    }
 
 }
