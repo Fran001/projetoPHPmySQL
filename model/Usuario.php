@@ -45,5 +45,14 @@ class Usuario {
         return $query->fetchAll();
         
     }
+    
+    public function listarUsuarioId($id){
+        $sql = 'SELECT * FROM usuarios WHERE id = :id';
+        $query = conexao :: prepare($sql);
+        $query->bindParam(':id',$id);
+        $query->execute();
+        return $query->fetch();
+        
+    }
 
 }

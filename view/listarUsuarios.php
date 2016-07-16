@@ -21,5 +21,13 @@ include_once '../control/UsuarioControl.php';
         <td><?php echo $usuario->nome;?></td>
         <td><?php echo $usuario->email;?></td>
     </tr>
-    <?php } ?>
+    <?php }
+ var_dump($dados = $usuarioControl->listarId(1));
+ 
+    echo $dados->id;
+    echo $dados->nome;
+    echo $dados->email;
+    echo $dados->senha;
+    
+    ?>
 </table>

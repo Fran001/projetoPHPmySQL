@@ -22,4 +22,9 @@ class UsuarioControl {
         
         
     }
+    
+    public function listarId($id){
+        $usuario = new Usuario();
+        return $usuario->listarUsuarioId($id);
+    }
 }
