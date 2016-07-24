@@ -1,5 +1,5 @@
 <?php
-
+include_once '../db/Conexao.php';
 class professores {
    private $id;
    private $numero_contribuinte;
@@ -54,6 +54,14 @@ class professores {
 
    function setEspecialidade_id($especialidade_id) {
        $this->especialidade_id = $especialidade_id;
+   }
+   
+   function salvar (){
+      $sql = "INSERT INTO professores(nome) VALUES(:nome)";
+        $query=Conexao::prepare($sql);
+        $query->bindValue(":nome", $this->getNome());
+        $query->execute(); 
+       
    }
 
 

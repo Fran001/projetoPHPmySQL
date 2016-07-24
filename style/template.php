@@ -63,6 +63,7 @@
           <ul class="dropdown-menu">
             <li><a href="#">Especialidades</a></li>
             <li><a href="#">Usuários</a></li>
+            <li><a href="#">Professores</a></li>
             <!--<li><a href="#">Something else here</a></li>-->
             <li role="separator" class="divider"></li>
             <li><a href="#">Sair</a></li>

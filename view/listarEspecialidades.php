@@ -38,6 +38,7 @@ $especialidadeControl = new EspecialidadeControl()
     
     <?php } ?>
 </table>
+<span> <?php echo $especialidadeControl->countRegistos(); ?> Cadastros</span>
 </div>
 <?php include_once '../style/footer.php';
  

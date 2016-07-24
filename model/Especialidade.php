@@ -26,5 +26,20 @@ class Especialidade {
         $query = Conexao::prepare($sql);
         $query->execute();
         return $query->fetchAll();
-    }
+    }   
+    public function salvar(){
+        $sql = "INSERT INTO especialidades(nome) VALUES(:nome)";
+        $query=Conexao::prepare($sql);
+        $query->bindValue(":nome", $this->getNome());
+        $query->execute();
+            
+        }
+        public function retornarCadastrados(){
+        $sql = Conexao::prepare("SELECT * FROM especialidades");
+        $sql->execute();
+
+        return $sql->rowCount();  
+            
+        }
+    
 }
