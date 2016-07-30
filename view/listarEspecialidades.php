@@ -1,7 +1,12 @@
 <?php
 include_once '../style/template.php';
 include_once '../control/EspecialidadeControl.php';
-$especialidadeControl = new EspecialidadeControl()
+$especialidadeControl = new EspecialidadeControl();
+        
+        if(isset($_GET['id'])){
+            $especialidadeControl->deletar();
+            
+        }
        
 
 //print_r($especialidadeControl->listarTodos());//usado para debugar o código;
@@ -10,7 +15,7 @@ $especialidadeControl = new EspecialidadeControl()
 ?>
 <div class="col-sm-10 col-sm-offset-1">
 <h1>Especialidades</h1>
-<a href="" class="pull-right btn-primary btn-xs">Cadastrar Especialidades</a>
+<a href="cadastrarEspecialidade.php" class="pull-right btn-primary btn-xs">Cadastrar Especialidades</a>
 <table class="jumbotron table table-striped">
     <tr>
         <th>id</th>
@@ -27,15 +32,16 @@ $especialidadeControl = new EspecialidadeControl()
         <td><?php echo $especialidade->id;?></td>
         <td><?php echo $especialidade->nome;?></td>
         <!--Adicionando os campos editar|deletar-->
-        <td>
+         <td>
             <div class="pull-right">
-                <a href="">Editar</a>  
-                | 
-                <a href="">Deletar</a>
+                <?php echo "<a href='editarEspecialidade.php?acao=editar&id=".$especialidade->id."'>Editar</a> "?>  
+                 
+                <?php echo "<a href='listarEspecialidades.php?acao=deletar&id=".$especialidade->id."'>Deletar</a> "?>
+                
             </div>
         </td>
     </tr>
-    
+        
     <?php } ?>
 </table>
 <span> <?php echo $especialidadeControl->countRegistos(); ?> Cadastros</span>

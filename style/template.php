@@ -61,9 +61,9 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastros <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Especialidades</a></li>
-            <li><a href="#">Usuários</a></li>
-            <li><a href="#">Professores</a></li>
+            <li><a href="listarEspecialidades.php">Especialidades</a></li>
+            <li><a href="listarUsuarios.php">Usuários</a></li>
+            <li><a href="listarProfessores.php">Professores</a></li>
             <!--<li><a href="#">Something else here</a></li>-->
             <li role="separator" class="divider"></li>
             <li><a href="#">Sair</a></li>

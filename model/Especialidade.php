@@ -41,5 +41,27 @@ class Especialidade {
         return $sql->rowCount();  
             
         }
-    
+        
+        public function buscar($id = NULL){
+         $sql = 'SELECT * FROM especialidades WHERE id = :id';
+         $query = Conexao::prepare($sql);
+         $query->bindValue("id",$id);
+         $query->execute();
+         return $query->fetch();
+        }
+        
+        public function atualizar($id){
+            $sql = "UPDATE especialidades SET  nome= :nome WHERE id=:id";
+            $query = Conexao::prepare($sql);
+            $query->bindValue("id",$id); //função do PDO que pega uam variável sql
+            $query->bindValue("nome", $this->getNome());
+            $query->execute();
+            }
+        public function deletar($id){
+            $sql = "DELETE FROM especialidades WHERE id= :id";
+            $query = Conexao::prepare($sql);
+            $query->bindValue("id",$id);
+            $query->execute();
+        }
+            
 }
